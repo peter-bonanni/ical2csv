@@ -64,7 +64,7 @@ def open_cal():
 def csv_write(icsfile):
     csvfile = icsfile[:-3] + "csv"
     try:
-        with open(csvfile, 'w') as myfile:
+        with open(csvfile, 'w', ecoding="utf-8") as myfile:
             wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
             wr.writerow(headers)
             for event in sortedevents:
